@@ -1,0 +1,32 @@
+#include<stdio.h>
+int inputarray(int a[],int *n)
+{
+int i;
+printf("Enter value of n\n");
+scanf("%d",n);
+printf("enter the array elements\n");
+for(i=0;i<*n;i++)
+{
+scanf("%d",&a[i]);
+}
+}
+int sumarray(int a[],int n)
+{
+int q=0,i;
+for(i=0;i<n;i++)
+{
+q=q+a[i];
+}
+return q;
+}
+int outputarray(int r)
+{
+printf("the sum of n numbers is  %d",r);
+}
+int main()
+{
+int n,r, a[20];
+inputarray(a,&n);
+r=sumarray(a,n);
+outputarray(r);
+}
